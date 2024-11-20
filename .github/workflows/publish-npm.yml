@@ -1,9 +1,9 @@
 name: Publish HQ Icons to NPM
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,16 +15,11 @@ jobs:
         with:
           registry-url: https://registry.npmjs.org/
           scope: '@dq-alhq'
-      - run: git config --global user.name "Diqi Al-Haqqi"
-      - run: git config --global user.email "dq.alhaqqi@gmail.com"
-      - run: yarn version --patch --message "Bump version to %s"
       - name: Install dependencies
         run: npm install
       - name: Build
         run: npm run build
-      - name: Authenticate with npm
+      - name: Authenticate with NPM
         run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
-      - name: Publish to npm
-        run: |
-          npm run release
-          npm publish --access=public
+      - name: Publish to NPM
+        run: npm publish --access=public
