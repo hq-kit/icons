@@ -57,16 +57,12 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@svgr/cli": "^8.1.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "prettier": "^3.3.3",
     "release-it": "^17.10.0",
     "rimraf": "^5.0.10",
-    "rollup": "^4.27.2",
+    "rollup": "^4.27.3",
     "rollup-plugin-filesize": "^10.0.0"
-  },
-  "peerDependencies": {
-    "react": "19.0.0-rc.1",
-    "react-dom": "19.0.0-rc.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0"
