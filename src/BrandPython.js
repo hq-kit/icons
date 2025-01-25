@@ -1,16 +1,12 @@
-import * as React from 'react'
+import * as React from "react";
 const SvgBrandPython = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width="16"
+    height="16"
     fill="none"
-    viewBox="0 0 24 24"
     {...props}
-    className={`cleon-icons ${props.className ? props.className : 'size-4'}`}
-    data-slot="icon"
-    aria-hidden="true"
-  >
+   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
     <path
       fill="currentColor"
       fillOpacity={0.7}
@@ -21,5 +17,5 @@ const SvgBrandPython = (props) => (
       d="M12.065 22c4.57 0 4.284-2.213 4.284-2.213l-.006-2.293h-4.36v-.689h6.093S21 17.175 21 12.026c0-5.15-2.552-4.967-2.552-4.967h-1.523v2.389s.082 2.85-2.511 2.85h-4.326s-2.43-.044-2.43 2.624v4.41S7.289 22 12.064 22m2.405-1.542a.7.7 0 0 1-.3-.066.8.8 0 0 1-.255-.19.9.9 0 0 1-.17-.284.97.97 0 0 1-.001-.67.9.9 0 0 1 .17-.285.8.8 0 0 1 .254-.19.7.7 0 0 1 .3-.067c.208 0 .407.092.555.256.147.164.23.387.23.619a.93.93 0 0 1-.229.62.75.75 0 0 1-.554.257"
     />
   </svg>
-)
-export default SvgBrandPython
+);
+export default SvgBrandPython;

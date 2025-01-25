@@ -1,17 +1,13 @@
-import * as React from 'react'
+import * as React from "react";
 const SvgLayers2 = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width="16"
+    height="16"
     fill="none"
-    viewBox="0 0 24 24"
     {...props}
-    className={`cleon-icons ${props.className ? props.className : 'size-4'}`}
-    data-slot="icon"
-    aria-hidden="true"
-  >
-    <g clipPath="url(#layers-2_svg__a)">
+   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+    <g clipPath="url(#a)">
       <path
         stroke="currentColor"
         strokeLinecap="round"
@@ -21,10 +17,10 @@ const SvgLayers2 = (props) => (
       />
     </g>
     <defs>
-      <clipPath id="layers-2_svg__a">
+      <clipPath id="a">
         <path fill="#fff" d="M0 0h24v24H0z" />
       </clipPath>
     </defs>
   </svg>
-)
-export default SvgLayers2
+);
+export default SvgLayers2;

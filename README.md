@@ -1,22 +1,22 @@
-## CLEON ICONS - REACT ICON LIBRARY
+## HQ ICONS - REACT ICON LIBRARY
 
 ## Installation
 
 ```bash
-npm i cleon-icons
+npm i hq-icons
 ```
 
 ```jsx
-import { IconUser } from 'cleon-icons'
+import { IconUser } from "hq-icons";
 <>
   <IconUser />
 </>
 ```
 
 ## Documentation
-[Cleon Icons](https://cleon-icons.vercel.app)
+
+[HQ Icons](https://hq-ui.vercel.app/icons)
 
 ## Author
 
 [Diqi Al-Haqqi](https://x.com/dqalhq)
-# cleon-icons

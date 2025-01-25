@@ -37,20 +37,27 @@
   "scripts": {
     "prepare": "npx husky",
     "format": "npx prettier --write .",
-    "addprefix": "node scripts/add-icon-prefix.js",
     "prebuild": "rimraf src && rimraf dist",
-    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' --replace-attr-values '1em={24}' --index-template index-template.js -d src -- ./svgs",
-    "build": "npm run svgr && node scripts/add-custom-attr.js && node scripts/generate-declarations.js && rollup -c",
-    "pr": "npm run build && npm run format && git add . && git commit -a",
+    "optimize": "npx svgo  -f ./svgs -o ./optimized-svg",
+    "build": "npm run optimize && npm run svgr && node scripts/add-custom-attr.js && node scripts/generate-declarations.js && rollup -c",
+    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' --replace-attr-values 1em=16 --no-svgo -d src -- ./optimized-svg",
+    "analyze": "rollup -c --bundleConfigAsCjs && npx rollup-plugin-visualizer",
+    "pr": "npm run build && git commit -a",
+    "test": "npm run build && npm link",
     "release": "export GITHUB_TOKEN=$(cat .github_token) && release-it"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
   ],
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@babel/plugin-transform-runtime": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
     "@commitlint/cli": "^18.6.1",
     "@release-it/conventional-changelog": "^8.0.2",
@@ -58,10 +65,10 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@svgr/cli": "^8.1.0",
     "husky": "^9.1.7",
-    "prettier": "^3.3.3",
-    "release-it": "^17.10.0",
+    "prettier": "^3.4.2",
+    "release-it": "^17.11.0",
     "rimraf": "^5.0.10",
-    "rollup": "^4.27.3",
+    "rollup": "^4.30.1",
     "rollup-plugin-filesize": "^10.0.0"
   },
   "dependencies": {

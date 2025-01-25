@@ -1,16 +1,12 @@
-import * as React from 'react'
+import * as React from "react";
 const SvgHeadset = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width="16"
+    height="16"
     fill="none"
-    viewBox="0 0 24 24"
     {...props}
-    className={`cleon-icons ${props.className ? props.className : 'size-4'}`}
-    data-slot="icon"
-    aria-hidden="true"
-  >
+   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -19,5 +15,5 @@ const SvgHeadset = (props) => (
       d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5m0-5h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2m0 0v2a4 4 0 0 1-4 4h-5"
     />
   </svg>
-)
-export default SvgHeadset
+);
+export default SvgHeadset;
