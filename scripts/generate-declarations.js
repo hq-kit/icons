@@ -31,8 +31,7 @@ fs.readdir(iconsDir, (err, files) => {
           `<svg style="background-color: #fff; border-radius: 2px;"`,
         );
 
-      return `
-/**
+      return `/**
  * @preview ![img](data:image/svg+xml;base64,${Buffer.from(fileContent).toString("base64")})
  */
 export declare const ${iconName}: React.FC<React.SVGProps<SVGSVGElement>>;

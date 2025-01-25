@@ -39,7 +39,7 @@
     "format": "npx prettier --write .",
     "prebuild": "rimraf src && rimraf dist",
     "optimize": "npx svgo  -f ./svgs -o ./optimized-svg",
-    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' --replace-attr-values 1em=24 --no-svgo --index-template index-template.js -d src -- ./optimized-svg",
+    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' --replace-attr-values '1em={24}' --no-svgo --index-template index-template.js -d src -- ./optimized-svg",
     "build": "npm run optimize && npm run svgr && node scripts/add-custom-attr.js && node scripts/generate-declarations.js && rollup -c",
     "analyze": "rollup -c --bundleConfigAsCjs && npx rollup-plugin-visualizer",
     "pr": "npm run build && git commit -a",
