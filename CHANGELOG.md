@@ -1,5 +1,7 @@
 
 
+## [0.0.10](https://github.com/hq-kit/icons/compare/0.0.9...0.0.10) (2025-02-02)
+
 ## [0.0.9](https://github.com/hq-kit/icons/compare/0.0.8...0.0.9) (2025-01-25)
 
 ## [0.0.8](https://github.com/hq-kit/icons/compare/0.0.7...0.0.8) (2025-01-25)
