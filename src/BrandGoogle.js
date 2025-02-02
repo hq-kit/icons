@@ -7,7 +7,7 @@ const SvgBrandGoogle = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="M21 12.204a10 10 0 0 0-.167-1.84h-8.65v3.486h4.943a4.1 4.1 0 0 1-.64 1.539 4.2 4.2 0 0 1-1.206 1.169v2.266h2.981c1.737-1.572 2.739-3.88 2.739-6.62"

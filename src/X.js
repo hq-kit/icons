@@ -11,7 +11,7 @@ const SvgX = (props) => (
     strokeWidth={2}
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path d="M18 6 6 18" />
     <path d="m6 6 12 12" />
   </svg>

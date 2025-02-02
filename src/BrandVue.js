@@ -7,7 +7,7 @@ const SvgBrandVue = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="M22 3h-8.283L12 6.075 10.283 3H2l10 18zM12 13.802 6.3 3.537h3.692L12 7.157l2.008-3.62H17.7z"

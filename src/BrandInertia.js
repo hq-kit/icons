@@ -7,7 +7,7 @@ const SvgBrandInertia = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path fill="currentColor" d="M8.176 6H3l5.001 6L3 18h5.175l5.001-6z" />
     <path fill="currentColor" d="M15.999 6H10.82l5.004 6-5.002 6H16l5-6z" />
   </svg>

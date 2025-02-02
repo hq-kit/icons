@@ -7,7 +7,7 @@ const SvgBrandKotlin = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path fill="currentColor" d="M21 21H3V3h18l-9 9z" />
   </svg>
 );

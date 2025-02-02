@@ -7,7 +7,7 @@ const SvgBrandAlpineJs = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="m22 12-4.767 5-4.77-4.996 4.77-5.003zM6.767 7 2 12l4.767 5H16.3z"

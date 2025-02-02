@@ -7,7 +7,7 @@ const SvgKeyRound = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path fill="currentColor" d="M16.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
     <path
       stroke="currentColor"

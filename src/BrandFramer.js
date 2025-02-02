@@ -7,7 +7,7 @@ const SvgBrandFramer = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="M18.334 2v6.667h-6.667L5 2zM5 8.667h6.667l6.667 6.666h-6.667V22L5 15.333z"

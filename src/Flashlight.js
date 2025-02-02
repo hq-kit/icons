@@ -7,7 +7,7 @@ const SvgFlashlight = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path fill="currentColor" d="M13 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
     <path
       stroke="currentColor"

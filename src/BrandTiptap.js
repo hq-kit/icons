@@ -7,7 +7,7 @@ const SvgBrandTiptap = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="M11 2c-1.658 0-3.21.448-4.545 1.23-.268.158-.386.508-.158.72.2.186.47.3.765.3h7.876c.295 0 .564-.114.765-.3.228-.212.11-.562-.158-.72A8.96 8.96 0 0 0 11 2"

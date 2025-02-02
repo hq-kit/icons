@@ -7,7 +7,7 @@ const SvgBrandUbuntu = (props) => (
     fill="none"
     viewBox="0 0 24 24"
     {...props}
-   className={`${props.className ? props.className : "size-4"}`} data-slot="icon" aria-hidden="true">
+   className={`hq-icons ${props.className || "size-4"}`} data-slot={props["data-slot"] || "icon"} aria-hidden="true">
     <path
       fill="currentColor"
       d="M4.85 13.74c1.023 0 1.852-.777 1.852-1.738 0-.96-.828-1.74-1.852-1.74-1.021 0-1.85.78-1.85 1.74s.828 1.739 1.85 1.739M17.8 21c1.022 0 1.85-.777 1.85-1.739 0-.96-.828-1.739-1.85-1.739s-1.852.78-1.852 1.74S16.778 21 17.8 21M13.483 7.662c2.248 0 4.114 1.621 4.423 3.723H21a7.17 7.17 0 0 0-2.025-4.406 2.66 2.66 0 0 1-2.472-.061 2.5 2.5 0 0 1-1.29-2.052 7.8 7.8 0 0 0-4.942.502l1.549 2.606a4.6 4.6 0 0 1 1.663-.312"
